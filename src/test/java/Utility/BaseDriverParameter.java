@@ -8,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -48,6 +49,10 @@ public class BaseDriverParameter {
 
     public void hover(WebElement element) {
         new Actions(driver).moveToElement(element).perform();
+    }
+
+    public void verifyPage(String expectedUrlPart) {
+        Assert.assertTrue(driver.getCurrentUrl().contains(expectedUrlPart),"Page verification failed");
     }
 
 
