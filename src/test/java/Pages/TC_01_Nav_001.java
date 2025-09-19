@@ -1,8 +1,6 @@
 package Pages;
 
 import Utility.BaseDriverParameter;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 public class TC_01_Nav_001 extends BaseDriverParameter {
