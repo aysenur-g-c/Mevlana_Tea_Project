@@ -10,7 +10,7 @@ public class Elements {
         PageFactory.initElements(driver,this);
     }
 
-    @FindBy(xpath = "//*[@title=Close]")
+    @FindBy(xpath = "//*[@title='Close']")
     public WebElement imgClose;
 
     @FindBy(xpath = "//ul[@id='menu-1-f3bd2bf']/li[1]")
@@ -37,16 +37,16 @@ public class Elements {
     @FindBy(xpath = "//*[@id='menu-1-f3bd2bf']/li[3]//li[1]")
     public WebElement urunlerBtn;
 
-    @FindBy(xpath = "//*[@id='menu-1-f3bd2bf']/li[3]//li[5]")
+    @FindBy(xpath = "(//*[text()='Morgenmarkt'])[1]")
     public WebElement morgenMrktBtn;
 
-    @FindBy(xpath = "//*[@id='menu-1-f3bd2bf']/li[3]//li[2]")
+    @FindBy(xpath = "(//*[text()='Mevlana Çay'])[4]")
     public WebElement mevlanaCayBtn;
 
-    @FindBy(xpath = "//*[@id='menu-1-f3bd2bf']/li[3]//li[3]")
+    @FindBy(xpath = "//*[@id='menu-1-f3bd2bf']/li[3]//li[2]")
     public WebElement mimarSinanCayBtn;
 
-    @FindBy(xpath = "//*[@id='menu-1-f3bd2bf']/li[3]//li[4]")
+    @FindBy(xpath = "//*[@id='menu-1-f3bd2bf']/li[3]//li[3]")
     public WebElement sindbadCayBtn;
 
 
