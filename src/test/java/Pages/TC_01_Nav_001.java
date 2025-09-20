@@ -33,7 +33,6 @@ public class TC_01_Nav_001 extends BaseDriverParameter {
         waitForClickable(elements.morgenMrktBtn); //açılmadı buraya bak
         //komple farklı bir link var ayrı assert at
         //sayfada geri gel ekle
-
         elements.blogBtn.click();
         verifyPage("turkce-blog/");
         hover(elements.galeriBtn);
