@@ -1,5 +1,6 @@
 package Utility;
 
+import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -70,6 +71,11 @@ public class BaseDriverParameter {
 
     public void verifyPage(String expectedUrlPart) {
         Assert.assertTrue(driver.getCurrentUrl().contains(expectedUrlPart),"Page verification failed");
+    }
+
+    protected String generateRandomEmail() {
+        Faker faker = new Faker();
+        return faker.internet().emailAddress();
     }
 
 

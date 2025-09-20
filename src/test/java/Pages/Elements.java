@@ -82,6 +82,14 @@ public class Elements {
     @FindBy(xpath = "//*[@class=\"elementor elementor-449\"]")
     WebElement Footer;
 
+    @FindBy(xpath = "//input[@type='email']")
+    public WebElement footerEmailBox;
+
+    @FindBy(xpath = "//input[@type='submit']")
+    public WebElement footerSubmitBtn;
+
+    @FindBy(xpath = "//*[@class='sib_msg_disp']/p")
+    public WebElement footerInfoMsg;
 
 
 
