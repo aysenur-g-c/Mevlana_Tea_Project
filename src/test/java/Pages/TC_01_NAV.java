@@ -3,10 +3,10 @@ package Pages;
 import Utility.BaseDriverParameter;
 import org.testng.annotations.Test;
 
-public class TC_01_Nav_001 extends BaseDriverParameter {
+public class TC_01_NAV extends BaseDriverParameter {
 
     @Test
-    public void Anasayfa(){
+    public void HomePage(){
         Elements elements=new Elements(driver);
 
         driver.get("https://mevlanacay.de/tr/");
