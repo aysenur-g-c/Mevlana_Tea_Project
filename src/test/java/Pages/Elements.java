@@ -115,4 +115,7 @@ public class Elements {
     @FindBy(xpath = "(//*[@class='elementor-grid-item'])[4]")
     public WebElement footerInstagramIcon;
 
+    @FindBy(xpath = "(//div[@data-widget_type='image.default'])[3]")
+    public WebElement footerPaymentMetIcon;
+
 }
