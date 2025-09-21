@@ -94,6 +94,25 @@ public class Elements {
     @FindBy(xpath = "//*[@class='next page-numbers']")
     public WebElement nextPageBtn;
 
+    @FindBy(xpath = "(//*[@class='elementor-widget-container']/p)[2]")
+    public WebElement footerAddress;
 
+    @FindBy(xpath = "(//*[text()='info@mevlanacay.de'])[2]")
+    public WebElement footerMail;
+
+    @FindBy(xpath = "(//*[@class='elementor-widget-container']/p)[3]")
+    public WebElement footerTel;
+
+    @FindBy(xpath = "(//*[@class='elementor-grid-item'])[1]")
+    public WebElement footerFacebookIcon;
+
+    @FindBy(xpath = "(//*[@class='elementor-grid-item'])[2]")
+    public WebElement footerYoutubeIcon;
+
+    @FindBy(xpath = "(//*[@class='elementor-grid-item'])[3]")
+    public WebElement footerXIcon;
+
+    @FindBy(xpath = "(//*[@class='elementor-grid-item'])[4]")
+    public WebElement footerInstagramIcon;
 
 }
