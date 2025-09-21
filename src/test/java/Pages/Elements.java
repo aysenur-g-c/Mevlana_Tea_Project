@@ -71,16 +71,16 @@ public class Elements {
     // US_LANG
 
     @FindBy(xpath = "(//li[contains(@class, 'trp-language-switcher-container')])[1]")
-    WebElement LangGerman;
+    public WebElement LangGerman;
 
     @FindBy(xpath = " (//li[contains(@class, 'trp-language-switcher-container')])[2]")
-    WebElement LangEnglish;
+    public WebElement LangEnglish;
 
     @FindBy(xpath = "(//li[contains(@class, 'trp-language-switcher-container')])[3]")
-    WebElement LangTurkish;
+    public WebElement LangTurkish;
 
     @FindBy(xpath = "//*[@class=\"elementor elementor-449\"]")
-    WebElement Footer;
+    public WebElement Footer;
 
 
 
