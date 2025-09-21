@@ -101,7 +101,6 @@ public class Foot extends BaseDriverParameter {
                 "Redirection to Facebook page failed.");
         driver.close();
         driver.switchTo().window(originalWindow);
-
     }
 
     @Test (priority = 3)
@@ -110,6 +109,5 @@ public class Foot extends BaseDriverParameter {
         driver.get("https://mevlanacay.de/tr/");
 
         waitForVisible(elements.footerPaymentMetIcon);
-
     }
 }
