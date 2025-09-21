@@ -41,20 +41,6 @@ public class BaseDriverParameter {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-        try {
-            WebElement cookieAcceptButton = driver.findElement(By.xpath(" (//*[@class=' cf2Lf6 cf8Oal'])[1]"));
-            cookieAcceptButton.click();
-        } catch (NoSuchElementException e) {
-
-            System.out.println("No cookie banner showed up.");
-        }
-        try {
-            WebElement popupCloseButton = driver.findElement(By.xpath("//*[@class='sgpb-popup-close-button-3']"));
-            popupCloseButton.click();
-        } catch (NoSuchElementException e) {
-            System.out.println("The pop-up did not appear");
-        }
-
     }
 
     public WebElement waitForVisible(WebElement element) {

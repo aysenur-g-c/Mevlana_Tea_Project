@@ -52,7 +52,7 @@ public class Elements {
     @FindBy(xpath = "//*[@id='menu-1-f3bd2bf']/li[7]")
     public WebElement iletisimBtn;
 
-    @FindBy(xpath = "//*[@id='menu-1-f3bd2bf']/li[3]//li[1]")
+    @FindBy(xpath = "//*[text()='Ürünler']")
     public WebElement urunlerBtn;
 
     @FindBy(xpath = "(//*[text()='Morgenmarkt'])[1]")
@@ -91,6 +91,8 @@ public class Elements {
     @FindBy(xpath = "//*[@class='sib_msg_disp']/p")
     public WebElement footerInfoMsg;
 
+    @FindBy(xpath = "//*[@class='next page-numbers']")
+    public WebElement nextPageBtn;
 
 
 
