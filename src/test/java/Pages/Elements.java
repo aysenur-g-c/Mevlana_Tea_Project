@@ -86,4 +86,7 @@ public class Elements {
 
 
 
+    @FindBy(xpath = "(//div[@data-widget_type='image.default'])[3]")
+    public WebElement footerPaymentMetIcon;
+
 }
