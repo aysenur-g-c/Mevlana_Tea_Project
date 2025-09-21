@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="mySuit" parallel="tests" thread-count="1">
+
+    <test name="test1">
+        <parameter name="BrowserTipi" value="chrome"></parameter>
+
+        <classes>
+            <class name="Pages.TC_04_FOOT"></class>
+        </classes>
+    </test>
+
+</suite>

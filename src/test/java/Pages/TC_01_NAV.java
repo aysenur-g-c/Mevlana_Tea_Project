@@ -39,11 +39,9 @@ public class TC_01_NAV extends BaseDriverParameter {
 
         new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.urlToBe("https://morgenmarkt.de/marken/goran-tee"));
-        Assert.assertEquals(
-                driver.getCurrentUrl(),
+        Assert.assertEquals(driver.getCurrentUrl(),
                 "https://morgenmarkt.de/marken/goran-tee",
-                "Redirection to Goran Tee page failed."
-        );
+                "Redirection to Goran Tee page failed.");
         driver.navigate().back();
 
         elements.blogBtn.click();
