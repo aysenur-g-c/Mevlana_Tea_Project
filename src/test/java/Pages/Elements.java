@@ -115,4 +115,26 @@ public class Elements {
     @FindBy(xpath = "(//*[@class='elementor-grid-item'])[4]")
     public WebElement footerInstagramIcon;
 
+
+
+
+
+
+
+
+
+
+
+
+
+    /// /////////////////////////////////////////
+    @FindBy(xpath = "//h2[text()='Wir verwenden Cookies']")
+    public WebElement cookieText;
+
+    @FindBy(xpath = "//span[text()='Alle akzeptieren']")
+    public WebElement cookieAcceptButton;
+
+    @FindBy(xpath = "//span[text()='Ablehnen']")
+    public WebElement cookieRejectButton;
+
 }
