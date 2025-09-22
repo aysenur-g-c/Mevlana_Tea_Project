@@ -82,6 +82,39 @@ public class Elements {
     @FindBy(xpath = "//*[@class=\"elementor elementor-449\"]")
     WebElement Footer;
 
+    // US_AUTH
+    @FindBy(xpath ="//*[@class='woocommerce-LostPassword lost_password']")
+    public WebElement forgotPasswordBtn;
+
+    @FindBy(xpath = "//*[@id='username']")
+    public WebElement usernameInput;
+
+    @FindBy(xpath = "//*[@id='password']")
+    public WebElement passwordInput;
+
+    @FindBy(xpath = "//*[@class='woocommerce-button button woocommerce-form-login__submit']")
+    public WebElement submitBtn;
+
+    @FindBy(xpath = "//*[@class='woocommerce-MyAccount-content']")
+    public WebElement welcomeMessage;
+
+    @FindBy(xpath = "//*[@class='woocommerce-error']")
+    public WebElement errorMessage;
+
+    @FindBy(xpath = "//*[@id='reg_email']")
+    public WebElement registerMail;
+
+    @FindBy(xpath = "//*[@class='woocommerce-Button woocommerce-button button woocommerce-form-register__submit']")
+    public WebElement registerSubmit;
+
+    @FindBy(xpath = "//*[@id='reg_password']")
+    public WebElement registerPassword;
+
+    @FindBy(xpath = "//*[@id='reg_username']")
+    public  WebElement regUsername;
+
+
+
 
 
 
