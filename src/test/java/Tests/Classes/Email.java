@@ -1,10 +1,11 @@
-package Pages;
+package Tests.Classes;
 
+import Pages.Elements;
 import Utility.BaseDriverParameter;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC_06_EMAİL extends BaseDriverParameter {
+public class Email extends BaseDriverParameter {
 
     @Test(priority = 1)
     public void SubscriptionArea(){

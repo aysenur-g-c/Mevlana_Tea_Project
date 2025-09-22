@@ -6,7 +6,7 @@
         <parameter name="BrowserTipi" value="chrome"></parameter>
 
         <classes>
-            <class name="Pages.TC_01_NAV"></class>
+            <class name="Tests.Classes.Nav"></class>
         </classes>
     </test>
 
