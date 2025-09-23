@@ -1,6 +1,5 @@
-package Tests.Classes;
+package Pages;
 
-import Pages.Elements;
 import Utility.BaseDriverParameter;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
@@ -11,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Foot extends BaseDriverParameter {
+public class TC_04_FOOT extends BaseDriverParameter {
 
     @Test (priority = 1)
     public void FooterCommunication(){
@@ -60,6 +59,7 @@ public class Foot extends BaseDriverParameter {
                 break;
             }
         }
+
         new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.urlToBe("https://www.youtube.com/channel/UCAz9J9R6tvp3K76s9zor3bA"));
         Assert.assertEquals(driver.getCurrentUrl(),

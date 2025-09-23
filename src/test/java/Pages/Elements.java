@@ -71,16 +71,16 @@ public class Elements {
     // US_LANG
 
     @FindBy(xpath = "(//li[contains(@class, 'trp-language-switcher-container')])[1]")
-    WebElement LangGerman;
+    public WebElement LangGerman;
 
     @FindBy(xpath = " (//li[contains(@class, 'trp-language-switcher-container')])[2]")
-    WebElement LangEnglish;
+    public WebElement LangEnglish;
 
     @FindBy(xpath = "(//li[contains(@class, 'trp-language-switcher-container')])[3]")
-    WebElement LangTurkish;
+    public WebElement LangTurkish;
 
     @FindBy(xpath = "//*[@class=\"elementor elementor-449\"]")
-    WebElement Footer;
+    public WebElement Footer;
 
     @FindBy(xpath = "//input[@type='email']")
     public WebElement footerEmailBox;
@@ -115,92 +115,7 @@ public class Elements {
     @FindBy(xpath = "(//*[@class='elementor-grid-item'])[4]")
     public WebElement footerInstagramIcon;
 
-
-    // PROD 1 -- 2--
-
-
-
-    @FindBy(xpath = "//div[@class='elementor-button-wrapper']/a/span/span[text()='Tüm Ürünler']")
-    public WebElement allProductsBtn;
-
-
-    @FindBy(xpath = "//*[contains(text(),'Mevlana Dökme Siyah Seylan Çay | Goran Tee | 1 Paket, 1000 g')]")
-    public WebElement firstProduct;
-
-    @FindBy(xpath = "//div[@class='summary entry-summary']/p/span/bdi")
-    public WebElement pricePrdct;
-
-    @FindBy(xpath = "//*[text()='Sepete Ekle']")
-    public WebElement firstBtnAddtoCart;
-
-
-
-
-
-    @FindBy(xpath = "//*[contains(text(),'Mimar Sinan Bergamot Aromalı Siyah Seylan Çay | Goran Tee 800g')]")
-    public WebElement secondProduct;
-
-    @FindBy(xpath = "//*[contains(text(),'Mimar Sinan Bergamot Aromalı Siyah Seylan Çay | Goran Tee 400g')]")
-    public WebElement thirdProduct;
-
-    @FindBy(xpath = "//*[contains(text(),'Mevlana Dökme Siyah Seylan Çay | Goran-Tee | 1 Paket, 500g')]")
-    public WebElement fourthProduct;
-
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(),'Mevlana Tee, CEYLON, GORAN TEE,')]")
-    public WebElement fifthProduct;
-
-
-
-
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Poşet')]")
-    public WebElement sixthProduct;
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Siyah')]")
-    public WebElement seventhProduct;
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Seylan')]")
-    public WebElement eighthProduct;
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Yeşil Çay | 25 Poşetlik Paket')]")
-    public WebElement ninthProduct;
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Kakule Aromalı Siyah Çay | 25 Poşetlik')]")
-    public WebElement tenthProduct;
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Kakule Aromalı Siyah Çay | 6lı Poşet Çay Seti')]")
-    public WebElement eleventhProduct;
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Yeşil Çay | 6 Paketlik Poşet Çay Seti')]")
-    public WebElement twelfthProduct;
-
-    @FindBy(xpath = "//*[@aria-label='Sayfa 2']")
-    public WebElement pageTwo;
-
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Sindbad Dökme Siyah Çay | Saf Seylan Çay | 1000g')]")
-    public WebElement thirteenthProduct;
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Sindbad Dökme Siyah Çay | Saf Seylan Çay | 500g')]")
-    public WebElement fourteenthProduct;
-
-
-
-
-
-
-
-
-
-    /// /////////////////////////////////////////
-    @FindBy(xpath = "//h2[text()='Wir verwenden Cookies']")
-    public WebElement cookieText;
-
-    @FindBy(xpath = "//span[text()='Alle akzeptieren']")
-    public WebElement cookieAcceptButton;
-
-    @FindBy(xpath = "//span[text()='Ablehnen']")
-    public WebElement cookieRejectButton;
+    @FindBy(xpath = "(//div[@data-widget_type='image.default'])[3]")
+    public WebElement footerPaymentMetIcon;
 
 }
