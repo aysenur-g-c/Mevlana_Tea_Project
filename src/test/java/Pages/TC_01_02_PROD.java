@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class TC_01_PROD extends BaseDriverParameter {
+public class TC_01_02_PROD extends BaseDriverParameter {
 
     @Test(priority = 1)
     public void AssertionProduct() {
@@ -60,7 +60,7 @@ public class TC_01_PROD extends BaseDriverParameter {
 
         waitForClickable(elements.nextPageBtn).click();
 
-        wait.until(ExpectedConditions.stalenessOf(stoktaYokEtiketleri.getFirst())); // eski verilerin yok olduğunu doğrula
+        wait.until(ExpectedConditions.stalenessOf(stoktaYokEtiketleri.getFirst()));
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//ul[@class='products columns-3']/li")));
 
         List<WebElement> stoktaYokEtiketleri2 = elements.noStockTexts;
