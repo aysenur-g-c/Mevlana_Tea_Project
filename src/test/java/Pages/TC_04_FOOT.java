@@ -59,6 +59,7 @@ public class TC_04_FOOT extends BaseDriverParameter {
                 break;
             }
         }
+
         new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.urlToBe("https://www.youtube.com/channel/UCAz9J9R6tvp3K76s9zor3bA"));
         Assert.assertEquals(driver.getCurrentUrl(),
