@@ -1,8 +1,5 @@
 package Utility;
 
-import com.github.javafaker.Faker;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -40,7 +37,6 @@ public class BaseDriverParameter {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-
     }
 
     public WebElement waitForVisible(WebElement element) {
@@ -57,11 +53,6 @@ public class BaseDriverParameter {
 
     public void verifyPage(String expectedUrlPart) {
         Assert.assertTrue(driver.getCurrentUrl().contains(expectedUrlPart),"Page verification failed");
-    }
-
-    protected String generateRandomEmail() {
-        Faker faker = new Faker();
-        return faker.internet().emailAddress();
     }
 
 
