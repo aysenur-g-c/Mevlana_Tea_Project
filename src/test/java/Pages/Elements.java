@@ -151,5 +151,4 @@ public class Elements {
     @FindBy(xpath = "//*[@id='reg_username']")
     public  WebElement regUsername;
 
-
 }
