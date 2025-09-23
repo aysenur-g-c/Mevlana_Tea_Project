@@ -1,14 +1,20 @@
-package Pages;
+package Tests.Classes;
 
+import Pages.Elements;
 import Utility.BaseDriverParameter;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC_01_Nav_001 extends BaseDriverParameter {
+import java.time.Duration;
 
-    @Test
-    public void Anasayfa(){
+public class Nav extends BaseDriverParameter {
+
+    @Test(priority = 1)
+    public void HomePage(){
         Elements elements=new Elements(driver);
-
         driver.get("https://mevlanacay.de/tr/");
 
         waitForVisible(elements.imgClose).click();
@@ -30,9 +36,15 @@ public class TC_01_Nav_001 extends BaseDriverParameter {
         verifyPage("sindbad-tee/");
         hover(elements.shopBtn);
 
-        waitForClickable(elements.morgenMrktBtn); //açılmadı buraya bak
-        //komple farklı bir link var ayrı assert at
-        //sayfada geri gel ekle
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", elements.morgenMrktBtn);
+
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.urlToBe("https://morgenmarkt.de/marken/goran-tee"));
+        Assert.assertEquals(driver.getCurrentUrl(),
+                "https://morgenmarkt.de/marken/goran-tee",
+                "Redirection to Goran Tee page failed.");
+        driver.navigate().back();
+
         elements.blogBtn.click();
         verifyPage("turkce-blog/");
         hover(elements.galeriBtn);
@@ -55,6 +67,21 @@ public class TC_01_Nav_001 extends BaseDriverParameter {
         verifyPage("tv-reklamlari/");
         elements.iletisimBtn.click();
         verifyPage("iletisim/");
+
+    }
+
+    @Test(priority = 2)
+    public void NextPage(){
+        Elements elements=new Elements(driver);
+        driver.get("https://mevlanacay.de/tr/");
+
+        waitForVisible(elements.imgClose).click();
+        hover(elements.shopBtn);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();",elements.urunlerBtn);
+        verifyPage("shop/");
+        hover(elements.footerSubmitBtn); //cookie engel olduğu için sayfa biraz yukarı kaydırma amacıyla kullanıldı
+        waitForClickable(elements.nextPageBtn).click();
+        verifyPage("page/2/");
 
 
     }
