@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class Elements {
 
     public Elements(WebDriver driver){
@@ -150,5 +152,20 @@ public class Elements {
 
     @FindBy(xpath = "//*[@id='reg_username']")
     public  WebElement regUsername;
+
+    @FindBy(xpath = "//div[@class='elementor-button-wrapper']/a/span/span[text()='Tüm Ürünler']")
+    public WebElement allProductsBtn;
+
+    @FindBy(xpath = "//ul[@class='products columns-3']/li//h3/a")
+    public List<WebElement> nameProducts;
+
+    @FindBy(xpath = "//ul[@class='products columns-3']/li//span[contains(@class, 'price')]")
+    public List<WebElement> prices;
+
+    @FindBy(xpath = "//ul[@class='products columns-3']/li//a[contains(@class, 'add_to_cart_button')]")
+    public List<WebElement> addtoCart;
+
+    @FindBy(xpath = "//span[contains(text(), 'Stokta Yok')]")
+    public List<WebElement> noStockTexts;
 
 }
