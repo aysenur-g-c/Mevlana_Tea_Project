@@ -5,9 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class Elements {
-    public Elements(WebDriver driver){
-        PageFactory.initElements(driver,this);
+    public Elements(WebDriver driver) {
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(xpath = "//*[@title='Close']")
@@ -118,79 +120,69 @@ public class Elements {
 
     // PROD 1 -- 2--
 
-
-
     @FindBy(xpath = "//div[@class='elementor-button-wrapper']/a/span/span[text()='Tüm Ürünler']")
     public WebElement allProductsBtn;
 
+    @FindBy(xpath = "//ul[@class='products columns-3']/li//h3/a")
+    public List<WebElement> nameProducts;
 
-    @FindBy(xpath = "//*[contains(text(),'Mevlana Dökme Siyah Seylan Çay | Goran Tee | 1 Paket, 1000 g')]")
-    public WebElement firstProduct;
+    @FindBy(xpath = "//ul[@class='products columns-3']/li//span[contains(@class, 'price')]")
+    public List<WebElement> prices;
 
-    @FindBy(xpath = "//div[@class='summary entry-summary']/p/span/bdi")
-    public WebElement pricePrdct;
+    @FindBy(xpath = "//ul[@class='products columns-3']/li//a[contains(@class, 'add_to_cart_button')]")
+    public List<WebElement> addtoCart;
 
-    @FindBy(xpath = "//*[text()='Sepete Ekle']")
-    public WebElement firstBtnAddtoCart;
+    @FindBy(xpath = "//span[contains(text(), 'Stokta Yok')]")
+    public List<WebElement> noStockTexts;
 
+//    @FindBy(xpath = "//*[contains(text(),'Mevlana Dökme Siyah Seylan Çay | Goran Tee | 1 Paket, 1000 g')]")
+//    public WebElement firstProduct;
+//
+//    @FindBy(xpath = "//div[@class='summary entry-summary']/p/span/bdi")
+//    public WebElement pricePrdct;
+//
+//    @FindBy(xpath = "//*[text()='Sepete Ekle']")
+//    public WebElement firstBtnAddtoCart;
+//    @FindBy(xpath = "//*[contains(text(),'Mimar Sinan Bergamot Aromalı Siyah Seylan Çay | Goran Tee 800g')]")
+//    public WebElement secondProduct;
+//
+//    @FindBy(xpath = "//*[contains(text(),'Mimar Sinan Bergamot Aromalı Siyah Seylan Çay | Goran Tee 400g')]")
+//    public WebElement thirdProduct;
+//
+//    @FindBy(xpath = "//*[contains(text(),'Mevlana Dökme Siyah Seylan Çay | Goran-Tee | 1 Paket, 500g')]")
+//    public WebElement fourthProduct;
+//
+//
+//    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(),'Mevlana Tee, CEYLON, GORAN TEE,')]")
+//    public WebElement fifthProduct;
 
-
-
-
-    @FindBy(xpath = "//*[contains(text(),'Mimar Sinan Bergamot Aromalı Siyah Seylan Çay | Goran Tee 800g')]")
-    public WebElement secondProduct;
-
-    @FindBy(xpath = "//*[contains(text(),'Mimar Sinan Bergamot Aromalı Siyah Seylan Çay | Goran Tee 400g')]")
-    public WebElement thirdProduct;
-
-    @FindBy(xpath = "//*[contains(text(),'Mevlana Dökme Siyah Seylan Çay | Goran-Tee | 1 Paket, 500g')]")
-    public WebElement fourthProduct;
-
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(),'Mevlana Tee, CEYLON, GORAN TEE,')]")
-    public WebElement fifthProduct;
-
-
-
-
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Poşet')]")
-    public WebElement sixthProduct;
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Siyah')]")
-    public WebElement seventhProduct;
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Seylan')]")
-    public WebElement eighthProduct;
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Yeşil Çay | 25 Poşetlik Paket')]")
-    public WebElement ninthProduct;
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Kakule Aromalı Siyah Çay | 25 Poşetlik')]")
-    public WebElement tenthProduct;
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Kakule Aromalı Siyah Çay | 6lı Poşet Çay Seti')]")
-    public WebElement eleventhProduct;
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Yeşil Çay | 6 Paketlik Poşet Çay Seti')]")
-    public WebElement twelfthProduct;
-
-    @FindBy(xpath = "//*[@aria-label='Sayfa 2']")
-    public WebElement pageTwo;
-
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Sindbad Dökme Siyah Çay | Saf Seylan Çay | 1000g')]")
-    public WebElement thirteenthProduct;
-
-    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Sindbad Dökme Siyah Çay | Saf Seylan Çay | 500g')]")
-    public WebElement fourteenthProduct;
-
-
-
-
-
-
-
+//    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Poşet')]")
+//    public WebElement sixthProduct;
+//
+//    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Siyah')]")
+//    public WebElement seventhProduct;
+//
+//    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Seylan')]")
+//    public WebElement eighthProduct;
+//
+//    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Yeşil Çay | 25 Poşetlik Paket')]")
+//    public WebElement ninthProduct;
+//
+//    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Kakule Aromalı Siyah Çay | 25 Poşetlik')]")
+//    public WebElement tenthProduct;
+//
+//    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Kakule Aromalı Siyah Çay | 6lı Poşet Çay Seti')]")
+//    public WebElement eleventhProduct;
+//
+//    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Mevlana Yeşil Çay | 6 Paketlik Poşet Çay Seti')]")
+//    public WebElement twelfthProduct;
+//
+//
+//    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Sindbad Dökme Siyah Çay | Saf Seylan Çay | 1000g')]")
+//    public WebElement thirteenthProduct;
+//
+//    @FindBy(xpath = "//h3[@class='woocommerce-loop-product__title']/a[contains(text(), 'Sindbad Dökme Siyah Çay | Saf Seylan Çay | 500g')]")
+//    public WebElement fourteenthProduct;
 
 
     /// /////////////////////////////////////////
