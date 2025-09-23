@@ -11,7 +11,7 @@ public class TC_01_PROD extends BaseDriverParameter {
         driver.get("https://mevlanacay.de/tr/");
         waitForClickable(elements.imgClose).click();
 
-        waitForClickable(elements.allProductsBtn).click();
+        waitForClickable(elements.urunlerBtn).click();
 
 
         // firstProduct
