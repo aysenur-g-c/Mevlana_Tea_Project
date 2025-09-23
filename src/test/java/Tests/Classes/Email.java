@@ -1,6 +1,5 @@
 package Tests.Classes;
 
-import Pages.Elements;
 import Utility.BaseDriverParameter;
 import org.testng.Assert;
 import org.testng.annotations.Test;
