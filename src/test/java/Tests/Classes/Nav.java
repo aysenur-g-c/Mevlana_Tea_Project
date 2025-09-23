@@ -1,6 +1,5 @@
 package Tests.Classes;
 
-import Pages.Elements;
 import Utility.BaseDriverParameter;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
