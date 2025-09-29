@@ -1,5 +1,7 @@
 package Utility;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -54,6 +56,19 @@ public class BaseDriverParameter {
     public void verifyPage(String expectedUrlPart) {
         Assert.assertTrue(driver.getCurrentUrl().contains(expectedUrlPart),"Page verification failed");
     }
+
+    public void closePopUpIfPresent(WebDriver driver){
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+            WebElement popupCloseButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='sgpb-popup-close-button-3']")));
+            popupCloseButton.click();
+            System.out.println("Pop-up is closed.");
+        } catch (TimeoutException e) {
+            System.out.println("The pop-up did not appear.");
+        }
+
+    }
+
 
 
     @AfterClass
